@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  web_dotnet:
+      build: .
+      ports:
+        - "5000:80"
+        - "5001:443"
