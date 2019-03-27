@@ -1,7 +1,7 @@
-FROM microsoft/aspnetcore:2.0
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 
 WORKDIR /app
 
-COPY ./src/AspMVC/publish .
+COPY ./src/AspApi/publish .
 
-ENTRYPOINT ["dotnet", "AspMVC.dll"]
+ENTRYPOINT ["dotnet", "AspApi.dll"]
