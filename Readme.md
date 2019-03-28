@@ -8,33 +8,45 @@ dotnet restore
 dotnet publish -o ./publish
 
 ```
+
 #test run
 
 ```
 cd publish
 
 dotnet AspMVC.dll
+```
+
+#build publish with docker
+
+```
+docker build -f image/dotnet-build-publish.dockerfile -t dotnet-image-build .
+
+```
 
 ##build docker
 
-docker build -t myimage .
+```
+docker build -t dotnet-image -f image/dotnet-build.dockerfile . --no-cache  >> see at http://localhost:8000/api/values
 ```
 
 #run docker
 
 ```
-docker run -p 5000:80 myimage
+docker run -p 8000:80 dotnet-image  >> see at http://localhost:8000/api/values
+
+Ref: 
+https://dev.to/schwamster/docker-tutorial-with-for-aspnet-core?fbclid=IwAR3N6HXf5Q6uPLs_JdVIQYLjI0Lm9EWfLUsl8QfJ2yZkSgtlgxw7U6jMKB4#choose_image
 ```
 
 #run docker compose
+
 ```
-docker-compose -f docker-compose.dev.yml up
+docker-compose build >> docker-compose up
 ```
 
 #Reference
 > medium asp.net core + docker
-
-    https://medium.com/@alcalawilfre/asp-net-core-with-docker-a-beginers-guide-4f490f644a89
 
     https://medium.com/@alcalawilfre/asp-net-core-with-docker-a-beginers-guide-4f490f644a89
 
