@@ -4,6 +4,6 @@ services:
   web_dotnet:
     build: 
       context: .
-      dockerfile: image/dotnet-build-publish.dockerfile
+      dockerfile: image/dotnet-build.dockerfile
     ports:
       - "8000:80"
