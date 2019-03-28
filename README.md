@@ -1,4 +1,8 @@
-# build publish folder
+# This Docker Image Test Asp.NET Core
+
+## Basic Build
+
+#### Build publish folder
 
 ```
 cd src/AspMVC
@@ -6,10 +10,9 @@ cd src/AspMVC
 dotnet restore
 
 dotnet publish -o ./publish
-
 ```
 
-# test run
+#### Test run
 
 ```
 cd publish
@@ -17,32 +20,29 @@ cd publish
 dotnet AspMVC.dll
 ```
 
-# build publish with docker
+## Build docker image test
 
 ```
-docker build -f image/dotnet-build-publish.dockerfile -t dotnet-image-build .
-
+docker build -t dotnet-image -f image/dotnet-build.dockerfile . --no-cache
 ```
 
-## build docker
-
-```
-docker build -t dotnet-image -f image/dotnet-build.dockerfile . --no-cache  >> see at http://localhost:8000/api/values
-```
-
-# run docker
+#### Run docker
 
 ```
 docker run -p 8000:80 dotnet-image  >> see at http://localhost:8000/api/values
-
-Ref: 
-https://dev.to/schwamster/docker-tutorial-with-for-aspnet-core?fbclid=IwAR3N6HXf5Q6uPLs_JdVIQYLjI0Lm9EWfLUsl8QfJ2yZkSgtlgxw7U6jMKB4#choose_image
 ```
 
-# run docker compose
+#### หรือ Run docker compose
 
 ```
-docker-compose build >> docker-compose up
+docker-compose build >> docker-compose up >> see at http://localhost:8000/api/values
+```
+
+# Build image docker with publish asp.net core
+
+With this [tutorial](https://dev.to/schwamster/docker-tutorial-with-for-aspnet-core?fbclid=IwAR3N6HXf5Q6uPLs_JdVIQYLjI0Lm9EWfLUsl8QfJ2yZkSgtlgxw7U6jMKB4#choose_image)
+```
+docker build -f image/dotnet-build-publish.dockerfile -t dotnet-image-build .
 ```
 
 # Reference
