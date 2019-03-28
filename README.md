@@ -1,4 +1,4 @@
-#build publish folder
+# build publish folder
 
 ```
 cd src/AspMVC
@@ -9,7 +9,7 @@ dotnet publish -o ./publish
 
 ```
 
-#test run
+# test run
 
 ```
 cd publish
@@ -17,20 +17,20 @@ cd publish
 dotnet AspMVC.dll
 ```
 
-#build publish with docker
+# build publish with docker
 
 ```
 docker build -f image/dotnet-build-publish.dockerfile -t dotnet-image-build .
 
 ```
 
-##build docker
+## build docker
 
 ```
 docker build -t dotnet-image -f image/dotnet-build.dockerfile . --no-cache  >> see at http://localhost:8000/api/values
 ```
 
-#run docker
+# run docker
 
 ```
 docker run -p 8000:80 dotnet-image  >> see at http://localhost:8000/api/values
@@ -39,13 +39,13 @@ Ref:
 https://dev.to/schwamster/docker-tutorial-with-for-aspnet-core?fbclid=IwAR3N6HXf5Q6uPLs_JdVIQYLjI0Lm9EWfLUsl8QfJ2yZkSgtlgxw7U6jMKB4#choose_image
 ```
 
-#run docker compose
+# run docker compose
 
 ```
 docker-compose build >> docker-compose up
 ```
 
-#Reference
+# Reference
 > medium asp.net core + docker
 
     https://medium.com/@alcalawilfre/asp-net-core-with-docker-a-beginers-guide-4f490f644a89
