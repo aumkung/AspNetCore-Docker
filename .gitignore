@@ -1,1 +1,4 @@
 .vscode
+src/AspApi/bin
+src/AspApi/obj
+src/AspApi/publish
