@@ -27,11 +27,15 @@
 
 ## set up https
 [dotnet docker https search](https://www.google.co.th/search?q=dotnet+docker+https&oq=dotnet+docker+https&aqs=chrome..69i57j69i60l3j0.5000j0j4&sourceid=chrome&ie=UTF-8)
+
 [https build](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetcore-docker-https.md)
+
 [https build 2](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetcore-docker-https-development.md)
+
 [https setup reader](https://mohitgoyal.co/2018/09/25/use-ssl-certificates-for-dotnet-core-application-in-docker-containers/)
 ## set up watcher
 [dotnet docker watch](https://github.com/Dispersia/Dotnet-Watch-Docker-Example)
+
 [dotnet docker watch nugut setup](https://natemcmaster.com/blog/2017/11/13/dotnet-watch-and-docker/)
 ## donet docker env variavles
 [dotnet docker env variable](https://www.scottbrady91.com/Docker/ASPNET-Core-and-Docker-Environment-Variables)
