@@ -1,9 +1,11 @@
 version: '3'
 
 services:
-  web_dotnet:
+  webapi:
     build: 
       context: .
-      dockerfile: image/dotnet-build.dockerfile
+      dockerfile: image/dotnet-api.dockerfile
     ports:
-      - "5000:80"
+      - "5000:5000"
+    volumes:
+      - './src/AspApi/:/app'
