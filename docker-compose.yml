@@ -6,13 +6,14 @@ services:
       context: .
       dockerfile: image/dotnet-api.dockerfile
     ports:
-      - "8000:80"
-      - "8001:443"
+      - "5000:80"
+      - "5001:443"
     volumes:
       - './src/AspApi/:/app'
     environment:
       DOTNET_USE_POLLING_FILE_WATCHER: 1
-      ASPNETCORE_URLS: "https://+;http://+"
-      ASPNETCORE_HTTPS_PORT: 8001
-      ASPNETCORE_Kestrel__Certificates__Default__Password: "aumkung01"
-      ASPNETCORE_Kestrel__Certificates__Default__Path: "./ssl/busbleApiapp.pfx"
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "http://:80/;https://.443"
+      ASPNETCORE_HTTPS_PORT: 5001
+      ASPNETCORE_Kestrel__Certificates__Default__Password: "testpassword"
+      ASPNETCORE_Kestrel__Certificates__Default__Path: "./ssl/busbleapi.pfx"
